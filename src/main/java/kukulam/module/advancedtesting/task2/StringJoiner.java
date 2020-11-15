@@ -2,7 +2,7 @@ package kukulam.module.advancedtesting.task2;
 
 import java.util.List;
 
-// Use in tests: assertThrows, assertDoesNotThrow
+// Use in tests: assertThrows, assertThatThrownBy, assertDoesNotThrow
 public class StringJoiner {
 
     public String create(List<String> arguments) {

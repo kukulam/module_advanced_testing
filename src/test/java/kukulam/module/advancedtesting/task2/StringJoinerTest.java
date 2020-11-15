@@ -8,6 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -30,7 +31,7 @@ class StringJoinerTest {
         List<String> arguments = Collections.emptyList();
 
         // when && then
-        assertThrows(IllegalArgumentException.class, () -> stringJoiner.create(arguments));
+        assertThatThrownBy(() -> stringJoiner.create(arguments)).isExactlyInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
